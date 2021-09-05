@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <form action="" method="POST">
+        {{ form.csrf_token() }}
+        <fieldset class="form-group">
+            <legend>Login</legend>
+
+            <div class="form-group">
+                {{ form.name.label(class="formcontrol-label") }}
+                {% if form.name.errors %}
+                    {{ form.name(class="form-control form-control is-invalid") }}
+                    {% for error in form.name.errors %}
+                    <div class="invalid-feedback">
+                        <span>{{ error }}</span>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    {{ form.name(class="form-control form-control") }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.completed.label(class="form-control-label") }}
+                {% if form.completed.errors %}
+                    {{ form.completed(class="form-control form-control is-invalid") }}
+                    {% for error in form.completed.errors %}
+                        <div class="invalid-feedback">
+                            <span>{{ error }}</span>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {{ form.completed(class="form-control form-control") }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.description.label(class="form-control-label") }}
+                {% if form.description.errors %}
+                    {{ form.description(class="form-control form-control is-invalid") }}
+                    {% for error in form.description.errors %}
+                        <div class="invalid-feedback">
+                            <span>{{ error }}</span>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {{ form.description(class="form-control form-control") }}
+                {% endif %}
+            </div>
+
+
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}
