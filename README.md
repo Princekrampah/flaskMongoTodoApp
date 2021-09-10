@@ -63,12 +63,13 @@ project_root_dir
 
 1. Simple Hello world app
 2. Setup database connection [Sign Up For mongoDB cloud](https://account.mongodb.com/account/login)
-3. Setup base template
-4. Setup index.html file
-5. Create Flask forms
-6. Setup database connection
+3. Setup __init__.py file (project configurattions)
+4. Setup base template
+5. Setup view_todos.html file
+6. Create Flask forms
 7. Create insert
 8. Implement Sweet alerts
 9. Create retrieve
 10. Implemet delete
 11. Implement update functionality
+12. Setup .gitignore file
